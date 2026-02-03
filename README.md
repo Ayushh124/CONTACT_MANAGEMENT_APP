@@ -59,6 +59,22 @@ ContactManager/
     │   └── utils/          # API Setup (Axios)
     └── tailwind.config.js  # Styling Config
 
+🔌 API Reference
+
+ User Authentication
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/api/auth/register` | Register a new user |
+| `POST` | `/api/auth/login` | Login user & get Token |
+
+#### Contacts
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/api/contacts` | Get all contacts for logged-in user |
+| `POST` | `/api/contacts` | Create a new contact |
+| `PUT` | `/api/contacts/:id` | Update a specific contact |
+| `DELETE` | `/api/contacts/:id` | Delete a specific contact |
+
 
 
 
