@@ -22,23 +22,5 @@ Before you begin, ensure you have the following installed:
 
 ---
 
-📂 Project Structure
-Plaintext
-ContactManager/
-├── backend/                # Server-side logic
-│   ├── config/             # Database connection
-│   ├── controllers/        # API logic (Auth, Contacts)
-│   ├── middleware/         # Auth protection
-│   ├── models/             # Database Schemas (User, Contact)
-│   ├── routes/             # API Routes
-│   └── server.js           # Entry point
-│
-└── frontend/               # Client-side UI
-    ├── src/
-    │   ├── components/     # Reusable UI parts
-    │   ├── context/        # Auth State Management
-    │   ├── pages/          # Login, Dashboard, ContactForm
-    │   └── utils/          # API Setup (Axios)
-    └── tailwind.config.js  # Styling Config
 
 
