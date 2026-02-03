@@ -23,6 +23,7 @@ Before you begin, ensure you have the following installed:
 ---
 
 ✨ Features
+
 User Authentication: Secure Login and Registration pages with password encryption.
 
 Contact Dashboard: View all contacts in a clean, responsive table.
