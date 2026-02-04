@@ -19,19 +19,29 @@ export const AuthProvider = ({ children }) => {
     }, [token]);
 
     const login = async (email, password) => {
-        const response = await api.post('/auth/login', { email, password });
-        const { token, ...userData } = response.data;
-        localStorage.setItem('token', token);
-        setToken(token);
-        setUser(userData);
+        try {
+            const response = await api.post('/auth/login', { email, password });
+            const { token, ...userData } = response.data;
+            localStorage.setItem('token', token);
+            setToken(token);
+            setUser(userData);
+        } catch (error) {
+            console.error("Login Error:", error);
+            throw error;
+        }
     };
 
     const register = async (name, email, password) => {
-        const response = await api.post('/auth/register', { name, email, password });
-        const { token, ...userData } = response.data;
-        localStorage.setItem('token', token);
-        setToken(token);
-        setUser(userData);
+        try {
+            const response = await api.post('/auth/register', { name, email, password });
+            const { token, ...userData } = response.data;
+            localStorage.setItem('token', token);
+            setToken(token);
+            setUser(userData);
+        } catch (error) {
+            console.error("Registration Error:", error);
+            throw error;
+        }
     };
 
     const logout = () => {
