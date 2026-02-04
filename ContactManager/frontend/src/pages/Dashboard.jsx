@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { LogOut, Plus, Search, Star, Phone, Mail, Pencil, Trash2 } from 'lucide-react';
+import { LogOut, Plus, Search, Star, Phone, Mail, Pencil, Trash2, Contact2 } from 'lucide-react';
 import api from '../utils/api';
 import AuthContext from '../context/AuthContext';
 
@@ -65,7 +65,8 @@ const Dashboard = () => {
             <nav className="bg-white shadow-sm border-b border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
-                        <div className="flex items-center">
+                        <div className="flex items-center gap-2">
+                            <Contact2 className="w-6 h-6 text-red-600" />
                             <span className="text-xl font-bold text-gray-900">ContactManager</span>
                         </div>
                         <div className="flex items-center">
