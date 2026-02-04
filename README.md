@@ -39,6 +39,32 @@ Favorites: Mark important contacts with a star.
 Phone Validation: Includes country codes and flags.
 
 
+## 🗄️ Database Schema
+
+```mermaid
+erDiagram
+    USER ||--o{ CONTACT : "manages"
+    
+    USER {
+        ObjectId _id PK
+        string name
+        string email UK "Unique"
+        string password "Hashed"
+        date createdAt
+    }
+
+    CONTACT {
+        ObjectId _id PK
+        ObjectId user FK "Reference to User"
+        string name
+        string email
+        string phone
+        string type "friend, family, work"
+        date createdAt
+    }
+
+
+
 ## 📂 Project Structure
 
 ```text
